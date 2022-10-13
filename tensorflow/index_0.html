@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiple object detection using pre trained model in TensorFlow.js</title>
+    <meta charset="utf-8">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="app.css">
+  </head>  
+  <body>
+    <h1>Multiple object detection using pre trained model in TensorFlow.js</h1>
+
+    <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become visible to use.</p>
+    
+    <section id="demos" class="invisible">
+
+      <p>Hold some objects up close to your webcam to get a real-time classification! When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of your window)</p>
+      
+      <div id="liveView" class="camView">
+        <button id="webcamButton">Enable Webcam</button>
+        <video id="webcam" autoplay muted width="640" height="480"></video>
+      </div>
+    </section>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script> -->
+    
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
+<html>
+<head>
+    <title>OpenCV Video Examples - Camera</title>
+    <link href="app.css" rel="stylesheet">
+</head>
+<body>
+<h1>OpenCV Camera</h1>
+<div>
+    <button id="actionBtn">Start</button>
+</div>
+<div id="liveView" class="camView">
+    <video id="video" autoplay muted width="640" height="480"></video>
+</div>
+
+<canvas id="canvasOutput"></canvas>
+
+<!-- This is for opencv.js to do some stuff -->
+<!-- download from here https://docs.opencv.org/4.6.0/opencv.js -->
+<script async src="opencv.js" type="text/javascript" onload="onCvLoaded();"></script> 
+
+<!-- tensorflow enhancements-->
+
+<!-- Import TensorFlow.js library -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+<!-- Load the coco-ssd model to use to recognize things in images -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.10.3"></script>
+<script src="https://unpkg.com/tfjs-onnx"></script> --> -->
+
+
+<!-- Include TF.js in HTML -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script> -->
+
+
+<!-- Import the page's JavaScript to do some stuff -->
+<script src="script.js" defer></script>
+
+
+</body>
+</html> -->
