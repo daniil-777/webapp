@@ -46,13 +46,13 @@ function enableCam(event) {
       facingMode: "environment"
     },
   }).then(stream => {
-    let $video = document.querySelector('video');
-    $video.videoHeight = 640;
-    $video.videoWidth = 640;
+    let $video = document.getElementsByTagName('video')[0];
+    $video.height = 640;
+    $video.width = 640;
     $video.srcObject = stream;
     $video.onloadedmetadata = () => {
-      vidWidth = $video.videoHeight;
-      vidHeight = $video.videoWidth;
+      vidWidth = $video.height;
+      vidHeight = $video.width  ;
       //The start position of the video (from top left corner of the viewport)
       xStart = Math.floor((vw - vidWidth) / 2);
       yStart = (Math.floor((vh - vidHeight) / 2)>=0) ? (Math.floor((vh - vidHeight) / 2)):0;
