@@ -47,6 +47,8 @@ function enableCam(event) {
     },
   }).then(stream => {
     let $video = document.querySelector('video');
+    $video.videoHeight = 640;
+    $video.videoWidth = 640;
     $video.srcObject = stream;
     $video.onloadedmetadata = () => {
       vidWidth = $video.videoHeight;
@@ -65,7 +67,9 @@ function enableCam(event) {
 
 var model = undefined;
 // model_url = 'https://raw.githubusercontent.com/KostaMalsev/ImageRecognition/master/model/mobile_netv2/web_model2/model.json';
-model_url = "/home/administrator/boxtrainer/code/webapp/ObjectDetection-master/model/mobile_netv2/web_model2/model.json"
+// model_url = "/home/administrator/boxtrainer/code/webapp/ObjectDetection-master/model/mobile_netv2/web_model2/model.json"
+model_url = "model/mobile_netv2/web_model2/model.json"
+
 //Call load function
 asyncLoadModel(model_url);
 
@@ -106,6 +110,7 @@ async function detectTFMOBILE(imgToPredict) {
 
     const resized = tf.cast(smallImg, 'int32');
     var tf4d_ = tf.tensor4d(Array.from(resized.dataSync()), [1,vidHeight, vidWidth, 3]);
+    // var tf4d_ = tf.tensor4d(Array.from(resized.dataSync()), [1,640, 640, 3]);
     const tf4d = tf.cast(tf4d_, 'int32');
 
     //Perform the detection with your layer model:
